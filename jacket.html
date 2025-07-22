@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacket Collection - Fashion Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        header {
+            background: linear-gradient(to right, purple, white);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .cart-icon {
+            background: white;
+            color: purple;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+        }
+        .filters {
+            width: 250px;
+            background: linear-gradient(to bottom right, purple, white);
+            padding: 20px;
+            color: white;
+        }
+        .filters h2 {
+            margin-top: 0;
+        }
+        .filters label {
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .filters select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        .products {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product-card {
+            background: white;
+            width: 220px;
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+        .product-card p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .product-options select {
+            width: 80px;
+            padding: 5px;
+            margin: 5px;
+            font-size: 0.8rem;
+        }
+        .product-card button {
+            background: lightpink;
+            color: purple;
+            border: none;
+            padding: 8px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .product-card button:hover {
+            background: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fashion Store - Jacket</h1>
+    <div class="cart-icon" onclick="alert('Cart opened!')">🛒</div>
+</header>
+
+<div class="container">
+    <div class="filters">
+        <h2>Filters</h2>
+        <label for="price">Price</label>
+        <select id="price">
+            <option>All</option>
+            <option>Under ₹500</option>
+            <option>₹500 - ₹1000</option>
+            <option>Above ₹1000</option>
+        </select>
+
+        <label for="size">Size</label>
+        <select id="size">
+            <option>All</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>
+    </div>
+
+    <div class="products">
+        <!-- Tees 1 -->
+        <div class="product-card">
+            <img src="mens-leather-jacket-aviatrix-2101-black-1_2.png" alt="Black Jacket">
+            <h3>Black Jacket</h3>
+            <p>₹799</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>White</option><option>Black</option><option>Pink</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 2 -->
+        <div class="product-card">
+            <img src="3e3a58612b4ca99178aa8aca9d463892.png" alt="Casual Jacket">
+            <h3>Casual Jacket</h3>
+            <p>₹999</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>White</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 3 -->
+        <div class="product-card">
+            <img src="Harley-Davidson-motorcycle-gangster-jacket-I03L-1.png" alt="Gangster Jacket">
+            <h3>Gangster Jacket</h3>
+            <p>₹1199</p>
+            <div class="product-options">
+                <select><option>M</option><option>L</option><option>XL</option></select>
+                <select><option>Black</option><option>Grey</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 4 -->
+        <div class="product-card">
+            <img src="77863299af160a1aba7eba7869f18a93.png" alt="Thumbhole Jacket">
+            <h3>Thumbhole Jacket</h3>
+            <p>₹599</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option></select>
+                <select><option>Red</option><option>Blue</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 5 -->
+        <div class="product-card">
+            <img src="dockers-Light-GreySoftshell-Bib-Wool-Blend-Open-Bottom-Jacket-With-Quilted.png" alt="Grey Jacket">
+            <h3>Grey Jacket</h3>
+            <p>₹899</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Grey</option><option>Black</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 6 -->
+        <div class="product-card">
+            <img src="ba176ee66f0635a402a80dc52857c427.png" alt="Stylish Jacket">
+            <h3>Stylish Jacket</h3>
+            <p>₹699</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option></select>
+                <select><option>Yellow</option><option>White</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 7 (Extra Added) -->
+        <div class="product-card">
+            <img src="51DBIf1MeoL._AC_UL1024_.png" alt="Casual White Jacket">
+            <h3>Casual White Jacket</h3>
+            <p>₹749</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>White</option><option>Grey</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 8 (Extra Added) -->
+        <div class="product-card">
+            <img src="88cd2ce951b12c4d9120bf485f292769.png" alt="Classy Jacket">
+            <h3>Classy Jacket</h3>
+            <p>₹850</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option></select>
+                <select><option>Pink</option><option>White</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
