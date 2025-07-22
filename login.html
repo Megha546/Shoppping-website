@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion Store - Login/Signup</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+
+    .background {
+      background: url('3618ba77-1285-4c1d-815d-651ed2e16dc3.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .background::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    }
+
+    .form-container {
+      position: relative;
+      z-index: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-align: center;
+      width: 300px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: purple;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background: #ffb6c1;  /* Light Pink */
+      color: purple;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .form-container button:hover {
+      background: purple;
+      color: white;
+    }
+
+    .form-container p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .form-container a {
+      color: purple;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background">
+    <div class="form-container">
+      <h2>Login / Sign Up</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
