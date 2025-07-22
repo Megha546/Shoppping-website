@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tees Collection - Fashion Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        header {
+            background: linear-gradient(to right, purple, white);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .cart-icon {
+            background: white;
+            color: purple;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+        }
+        .filters {
+            width: 250px;
+            background: linear-gradient(to bottom right, purple, white);
+            padding: 20px;
+            color: white;
+        }
+        .filters h2 {
+            margin-top: 0;
+        }
+        .filters label {
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .filters select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        .products {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product-card {
+            background: white;
+            width: 220px;
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+        .product-card p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .product-options select {
+            width: 80px;
+            padding: 5px;
+            margin: 5px;
+            font-size: 0.8rem;
+        }
+        .product-card button {
+            background: lightpink;
+            color: purple;
+            border: none;
+            padding: 8px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .product-card button:hover {
+            background: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fashion Store - Tees</h1>
+    <div class="cart-icon" onclick="alert('Cart opened!')">🛒</div>
+</header>
+
+<div class="container">
+    <div class="filters">
+        <h2>Filters</h2>
+        <label for="price">Price</label>
+        <select id="price">
+            <option>All</option>
+            <option>Under ₹500</option>
+            <option>₹500 - ₹1000</option>
+            <option>Above ₹1000</option>
+        </select>
+
+        <label for="size">Size</label>
+        <select id="size">
+            <option>All</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>
+    </div>
+
+    <div class="products">
+        <!-- Tees 1 -->
+        <div class="product-card">
+            <img src="52d8d79a-5f8f-4cd1-8585-15cb9a7c13ac.png" alt="White Tee">
+            <h3>White Fitted Tee</h3>
+            <p>₹799</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>White</option><option>Black</option><option>Pink</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 2 -->
+        <div class="product-card">
+            <img src="0c9222d5-730a-4bff-91a7-8864f6574b7d.png" alt="Nike Black Tee">
+            <h3>Nike Black Tee</h3>
+            <p>₹999</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>White</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 3 -->
+        <div class="product-card">
+            <img src="6637a5ed-5c52-48c7-aa02-7bae0100b556.png" alt="Gangster Tee">
+            <h3>Gangster Black Tee</h3>
+            <p>₹1199</p>
+            <div class="product-options">
+                <select><option>M</option><option>L</option><option>XL</option></select>
+                <select><option>Black</option><option>Grey</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 4 -->
+        <div class="product-card">
+            <img src="3edad7f1-19d4-4b90-bdc0-040d1427c4e7.png" alt="Old Navy Red Tee">
+            <h3>Old Navy Red Tee</h3>
+            <p>₹599</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option></select>
+                <select><option>Red</option><option>Blue</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 5 -->
+        <div class="product-card">
+            <img src="1d15041d-25cf-4a8b-bc79-dbe6bfa8906b.png" alt="Grey Scoop Tee">
+            <h3>Grey Scoop Neck Tee</h3>
+            <p>₹899</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Grey</option><option>Black</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 6 -->
+        <div class="product-card">
+            <img src="696d44fa-44ed-4cb1-b5db-b186afd34492.png" alt="Yellow V-neck Tee">
+            <h3>Yellow V-neck Tee</h3>
+            <p>₹699</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option></select>
+                <select><option>Yellow</option><option>White</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 7 (Extra Added) -->
+        <div class="product-card">
+            <img src="3ca609f57b2257b96cbc0609f1eb1c10.png" alt="Casual White Tee">
+            <h3>Casual White Tee</h3>
+            <p>₹749</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>White</option><option>Grey</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Tees 8 (Extra Added) -->
+        <div class="product-card">
+            <img src="e3a10c87178060a599c202c09883849f.png" alt="Summer Pink Tee">
+            <h3>Summer Pink Tee</h3>
+            <p>₹850</p>
+            <div class="product-options">
+                <select><option>S</option><option>M</option></select>
+                <select><option>Pink</option><option>White</option></select>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
