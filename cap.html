@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion Store - Caps</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9; /* richer whitish purple */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, #c471ed, #a67ee5); /* deeper purple gradient */
+      color: white;
+    }
+
+    .cart-icon {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .filters {
+      width: 220px;
+      background: #e9d4fa;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #5c278b;
+    }
+
+    .filters h3 {
+      margin-top: 0;
+    }
+
+    .filter-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .filter-group select {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      flex: 1;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(142, 45, 226, 0.15); /* soft purple shadow */
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-info h4 {
+      margin: 0 0 0.5rem 0;
+      color: #7a1bc4;
+    }
+
+    .product-info p {
+      margin: 0.3rem 0;
+      color: #5c278b;
+      font-weight: bold;
+    }
+
+    .color-options select {
+      width: 80%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #b383dc;
+    }
+
+    .product-card button {
+      margin: 1rem auto;
+      padding: 0.5rem 1rem;
+      border: 2px solid #8e2de2;
+      background-color: transparent;
+      color: #8e2de2;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #e1c9f5;
+      color: #6a1bb9;
+    }
+
+    .product-card button.clicked {
+      background-color: #6a1bb9;
+      color: white;
+      border: 2px solid #6a1bb9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Fashion Store - Caps</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" class="cart-icon" alt="Cart" />
+  </header>
+
+  <div class="container">
+    <!-- Filter Section -->
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <label for="price">Price</label>
+        <select id="price">
+          <option>All</option>
+          <option>Below ₹300</option>
+          <option>₹400 - ₹600</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Products Section -->
+    <section class="products">
+      <div class="product-card">
+        <img src="701223457002_pp_03_scuderia-ferrari.png" alt="Black Cap" />
+        <div class="product-info">
+          <h4>Classic Black Cap</h4>
+          <p>₹299</p>
+          <div class="color-options">
+            <select>
+              <option>Black</option>
+              <option>Grey</option>
+            </select>
+          </div>
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="pro-sportswear-cap-obsidian-blue-white-snapback-nike.png" alt="Blue Cap" />
+        <div class="product-info">
+          <h4>Sporty Blue Cap</h4>
+          <p>₹459</p>
+          <div class="color-options">
+            <select>
+              <option>Blue</option>
+              <option>White</option>
+            </select>
+          </div>
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="f8c5467405692fb83d84144fd658f798.png" alt="Red Cap" />
+        <div class="product-info">
+          <h4>Red Snapback</h4>
+          <p>₹499</p>
+          <div class="color-options">
+            <select>
+              <option>Red</option>
+              <option>Black</option>
+            </select>
+          </div>
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="White-Cap.png" alt="White Cap" />
+        <div class="product-info">
+          <h4>Clean White Cap</h4>
+          <p>₹385</p>
+          <div class="color-options">
+            <select>
+              <option>White</option>
+              <option>Beige</option>
+            </select>
+          </div>
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="61VcbJ7S0+L._AC_UL1300_.png" alt="Brown Cap" />
+        <div class="product-info">
+          <h4>Vintage Brown Cap</h4>
+          <p>₹470</p>
+          <div class="color-options">
+            <select>
+              <option>Brown</option>
+              <option>Khaki</option>
+            </select>
+          </div>
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const cartButtons = document.querySelectorAll('.cart-btn');
+
+    cartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('clicked');
+      });
+    });
+  </script>
+
+</body>
+</html>
